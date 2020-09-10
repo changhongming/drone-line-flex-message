@@ -26,8 +26,10 @@
     }
 
     try {
-        // try complie template json
-        const template = Handlebars.compile(await (await fs.readFile(path.join(__dirname, 'template.json.temp'))).toString());
+        // try compile template json
+        const template = Handlebars.compile(await fs.readFile(
+            path.join(__dirname, 'template.json.temp'),
+            'utf-8'));
         const payload = template(process.env);
 
         // send line message
