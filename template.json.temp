@@ -18,7 +18,7 @@
                     "text": "Drone Notify",
                     "weight": "bold",
                     "wrap": false,
-                    "color": "#1DB446",
+                    "color": "#2677cd",
                     "flex": 1,
                     "size": "sm",
                     "margin": "none",
@@ -42,7 +42,7 @@
                     "text": "{{defaultVal DRONE_COMMIT_MESSAGE 'Unknown'}}",
                     "weight": "regular",
                     "wrap": true,
-                    "color": "#aaaaaa",
+                    "color": "#777777",
                     "flex": 1,
                     "size": "xs",
                     "margin": "md",
@@ -249,7 +249,7 @@
                             "margin": "md",
                             "height": "md",
                             "style": "primary",
-                            "color": "#9b9b9b",
+                            "color": "#2677cd",
                             "gravity": "center"
                         }
                         {{/if}}
@@ -265,7 +265,7 @@
                             "margin": "md",
                             "height": "md",
                             "style": "primary",
-                            "color": "#9b9b9b",
+                            "color": "#2677cd",
                             "gravity": "center"
                         }
                         {{/if}}
