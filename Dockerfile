@@ -5,4 +5,4 @@ COPY . /usr/src
 
 RUN npm install
 
-ENTRYPOINT ["node", "index.js"]
+ENTRYPOINT ["node", "/usr/src/index.js"]
