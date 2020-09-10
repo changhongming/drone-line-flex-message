@@ -1,7 +1,8 @@
 {
-  "name": "drone-line-notify",
+  "name": "drone-line-flex-message",
   "version": "1.0.0",
   "description": "drone ci line notify",
+  "repository": "https://github.com/changhongming/drone-line-flex-message",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
