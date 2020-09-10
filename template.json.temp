@@ -1,0 +1,307 @@
+[
+{
+    "type": "flex",
+    "altText": "Drone Notify",
+    "contents": {
+        "type": "bubble",
+        "body": {
+            {{#ifEquals DRONE_BUILD_STATUS 'success'}}
+            "backgroundColor": "#aaffaa",
+            {{else}}
+            "backgroundColor": "#ffaaaa",
+            {{/ifEquals}}
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "Drone Notify",
+                    "weight": "bold",
+                    "wrap": false,
+                    "color": "#1DB446",
+                    "flex": 1,
+                    "size": "sm",
+                    "margin": "none",
+                    "align": "start",
+                    "gravity": "top"
+                },
+                {
+                    "type": "text",
+                    "text": "{{defaultVal DRONE_REPO_NAME 'Unknown'}}",
+                    "weight": "bold",
+                    "wrap": true,
+                    "color": "#464646",
+                    "flex": 1,
+                    "size": "xxl",
+                    "margin": "md",
+                    "align": "start",
+                    "gravity": "top"
+                },
+                {
+                    "type": "text",
+                    "text": "{{defaultVal DRONE_COMMIT_MESSAGE 'Unknown'}}",
+                    "weight": "regular",
+                    "wrap": true,
+                    "color": "#aaaaaa",
+                    "flex": 1,
+                    "size": "xs",
+                    "margin": "md",
+                    "align": "start",
+                    "gravity": "top"
+                },
+                {
+                    "type": "separator",
+                    "margin": "md",
+                    "color": "#555555"
+                },
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Branch",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#555555",
+                                    "flex": 0,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "start",
+                                    "gravity": "top"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "{{defaultVal DRONE_COMMIT_BRANCH 'Unknown'}}",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#111111",
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "end",
+                                    "gravity": "top"
+                                }
+                            ],
+                            "flex": 1,
+                            "spacing": "none",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Event",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#555555",
+                                    "flex": 0,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "start",
+                                    "gravity": "top"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "{{defaultVal DRONE_BUILD_EVENT 'Unknown'}}",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#111111",
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "end",
+                                    "gravity": "top"
+                                }
+                            ],
+                            "flex": 1,
+                            "spacing": "none",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Author",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#555555",
+                                    "flex": 0,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "start",
+                                    "gravity": "top"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "{{defaultVal DRONE_COMMIT_AUTHOR 'Unknown'}}",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#111111",
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "end",
+                                    "gravity": "top"
+                                }
+                            ],
+                            "flex": 1,
+                            "spacing": "none",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Build Number",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#555555",
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "start",
+                                    "gravity": "top"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "{{defaultVal DRONE_BUILD_NUMBER 'Unknown'}}",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#111111",
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "end",
+                                    "gravity": "top"
+                                }
+                            ],
+                            "flex": 1,
+                            "spacing": "none",
+                            "margin": "md"
+                        },
+                        {
+                            "type": "box",
+                            "layout": "horizontal",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Build Status",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    "color": "#555555",
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "start",
+                                    "gravity": "top"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "{{defaultVal DRONE_BUILD_STATUS 'Unknown'}}",
+                                    "weight": "regular",
+                                    "wrap": false,
+                                    {{#ifEquals DRONE_BUILD_STATUS 'success'}}
+                                    "color": "#33aa55",
+                                    {{else}}
+                                    "color": "#cc3d33",
+                                    {{/ifEquals}}
+                                    "flex": 1,
+                                    "size": "sm",
+                                    "margin": "none",
+                                    "align": "end",
+                                    "gravity": "top"
+                                }
+                            ],
+                            "flex": 1,
+                            "spacing": "none",
+                            "margin": "md"
+                        }
+                    ],
+                    "flex": 1,
+                    "spacing": "none",
+                    "margin": "md"
+                }
+                {{#ifOr DRONE_COMMIT_LINK DRONE_BUILD_LINK}}
+                ,{
+                    "type": "box",
+                    "layout": "horizontal",
+                    "contents": [
+                        {{#if DRONE_COMMIT_LINK}}
+                        {
+                            "type": "button",
+                            "action": {
+                                "type": "uri",
+                                "label": "Changes",
+                                "uri": "{{DRONE_COMMIT_LINK}}"
+                            },
+                            "flex": 1,
+                            "margin": "md",
+                            "height": "md",
+                            "style": "primary",
+                            "color": "#9b9b9b",
+                            "gravity": "center"
+                        }
+                        {{/if}}
+                        {{#if DRONE_BUILD_LINK}}
+                        ,{
+                            "type": "button",
+                            "action": {
+                                "type": "uri",
+                                "label": "Build",
+                                "uri": "{{DRONE_BUILD_LINK}}"
+                            },
+                            "flex": 1,
+                            "margin": "md",
+                            "height": "md",
+                            "style": "primary",
+                            "color": "#9b9b9b",
+                            "gravity": "center"
+                        }
+                        {{/if}}
+                    ],
+                    "flex": 1,
+                    "spacing": "none",
+                    "margin": "xxl"
+                }
+                {{/ifOr}}
+            ],
+            "flex": 1,
+            "spacing": "none",
+            "margin": "md"
+        },
+        "styles": {
+            "header": {
+                "backgroundColor": "#FFFFFF",
+                "separator": false,
+                "separatorColor": "#FFFFFF"
+            },
+            "hero": {
+                "backgroundColor": "#FFFFFF",
+                "separator": false,
+                "separatorColor": "#FFFFFF"
+            },
+            "body": {
+                "backgroundColor": "#FFFFFF",
+                "separator": false,
+                "separatorColor": "#FFFFFF"
+            },
+            "footer": {
+                "backgroundColor": "#FFFFFF",
+                "separator": false,
+                "separatorColor": "#FFFFFF"
+            }
+        }
+    }
+}
+]
