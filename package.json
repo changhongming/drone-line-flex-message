@@ -1,6 +1,6 @@
 {
   "name": "drone-line-flex-message",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "drone ci line notify",
   "repository": "https://github.com/changhongming/drone-line-flex-message",
   "main": "index.js",
