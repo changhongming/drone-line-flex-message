@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint *.js */*.js"
+    "lint": "eslint *.js */*.js --no-error-on-unmatched-pattern"
   },
   "author": "kevin",
   "license": "ISC",
